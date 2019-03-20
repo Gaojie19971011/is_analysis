@@ -54,6 +54,7 @@ end fork
 @enduml
 ```
 运行结果：
+![](./finalExamProcess.png)
 
 
 图6.2，代码：
