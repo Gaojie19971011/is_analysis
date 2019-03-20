@@ -5,6 +5,9 @@
 - 重新绘制的两个流程图要汇总到REMADE.md文本文件中进行说明，说明文件用Markdown格式编写。
 
 图6.1,代码：
+
+
+···
 @startuml
 title <期末考试流程>
 
@@ -89,5 +92,5 @@ end fork
 -:结算收款;
 -stop
 -@enduml
-
+···
 结果：
