@@ -5,53 +5,52 @@
 - 重新绘制的两个流程图要汇总到REMADE.md文本文件中进行说明，说明文件用Markdown格式编写。
 
 图6.1,代码：
--@startuml
--title <期末考试流程>
--
--|教务处|
--:安排考试;
--:考试安排表]
--|教师|
--:出卷;
--split
--:A、B试卷]
+@startuml
+title <期末考试流程>
 
--split again
--:打印审批表]
--|系主任|
--:审批签字;
--:打印审批表]
--end split
- -|教务处|
- -:打印试卷;
- -:试卷]
--|学生|
--:参加考试;
--:答卷]
--|教师|
--:阅卷出成绩;
--fork
--:答卷]
--:装订成档;
--fork again
--|教师|
--:成绩单]
--|教务处|
--if (有不合格？) then (有)
-- :安排补考;
-- fork
- -:补考安排表]
- -detach
- -fork again
- -end fork
--else
--stop
--endif
--end fork
--|教师|
--:期末流程结束;
--@enduml
--结果：
+|教务处|
+:安排考试;
+:考试安排表]
+|教师|
+:出卷;
+split
+:A、B试卷]
+
+split again
+:打印审批表]
+|系主任|
+:审批签字;
+:打印审批表]
+end split
+ |教务处|
+ :打印试卷;
+ :试卷]
+|学生|
+:参加考试;
+:答卷]
+|教师|
+:阅卷出成绩;
+fork
+:答卷]
+:装订成档;
+fork again
+|教师|
+:成绩单]
+|教务处|
+if (有不合格？) then (有)
+ :安排补考;
+ fork
+ :补考安排表]
+ detach
+ fork again
+ end fork
+else
+stop
+endif
+end fork
+|教师|
+:期末流程结束;
+@enduml
 
 -图6.2，代码：
 -@startuml
