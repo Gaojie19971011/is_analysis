@@ -97,4 +97,4 @@ stop
 @enduml
 ```
 运行结果：
-![](./clientDepireSurviceProcess.png)
+![](./clientRepairSurviceProcess.png)
