@@ -39,7 +39,7 @@
 
 
 ### 1.2. 用例图如下：
-![](./finalExamProcess.png)
+![](./bookManagementSystem.png)
 
 ## 2. 参与者说明：
 
@@ -81,92 +81,10 @@
 |后置条件 |更新账号信息|
 |主事件流|1.系统将所有图书信息和借阅者账号信息发给管理员<br> 2.管理员可以将信息修改并返还给系统<br> 3.系统接收处理并存储信息;<br>|
 
-**“图书管理”用例流程图源码如下：**
-``` 
-@startuml
-start
-:图书管理员;
-:登录;
-:图书管理;
-split
-:借书;
-if (身份验证) then (符合借书条件)
-:同意借出图书;
-else (不符合)
-:不同意借出图书;
-endif
-split again
-:还书;
-if (是否违规) then (是)
-:作出罚款;
-else(否)
-endif
-:归还成功;
-split again
-:图书分类;
-end split
-stop
-@enduml
-```
+**“图书管理”用例：**
 
-**“图书管理”用例流程图如下：**
 
-![](./finalExamProcess.png)
+**“用户管理”用例**
 
-**“用户管理”用例流程源码如下**
-```
-@startuml
-start
-:图书借阅者;
-:登录;
-:用户管理;
-split
-:个人信息查询;
-split again
-:借书;
-split again
-:查询图书;
-split again
-:还书;
-end split
-stop
-@enduml
-```
-**“用户管理”用例流程图如下：**
+**“系统管理”用例**
 
-![](./finalExamProcess.png)
-
-**“系统管理”用例流程源码如下**
-```
-@startuml
-start
-:系统管理员;
-:登录;
-:系统管理;
-split
-:图书管理;
-split
-:删除图书;
-split again
-:添加图书;
-end split
-split again
-:借阅者管理;
-split
-:图书借阅者修改;
-split again
-:图书借阅者添加;
-split again
-:图书借阅者删除;
-split again
-end split
-end split
-stop
-@enduml
-@enduml
-```
-**“系统管理”用例流程图如下：**
-
-![](./finalExamProcess.png)
-
-###     3.3 “***”用例
