@@ -85,8 +85,9 @@
 https://github.com/Gaojie19971011/is_analysis/blob/master/test2/libarianUsecase.md
 
 **“用户管理”用例**
-https://github.com/Gaojie19971011/is_analysis/blob/master/test2/administratorUsecase.md
+https://github.com/Gaojie19971011/is_analysis/blob/master/test2/borrowerUsecase.md
 
 **“系统管理”用例**
-https://github.com/Gaojie19971011/is_analysis/blob/master/test2/borrowerUsecase.md
+https://github.com/Gaojie19971011/is_analysis/blob/master/test2/administratorUsecase.md
+
 
