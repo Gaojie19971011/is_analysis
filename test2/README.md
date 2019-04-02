@@ -82,9 +82,11 @@
 |主事件流|1.系统将所有图书信息和借阅者账号信息发给管理员<br> 2.管理员可以将信息修改并返还给系统<br> 3.系统接收处理并存储信息;<br>|
 
 **“图书管理”用例：**
-https://github.com/zwdbox/is_analysis
+https://github.com/Gaojie19971011/is_analysis/blob/master/test2/libarianUsecase.md
 
 **“用户管理”用例**
+https://github.com/Gaojie19971011/is_analysis/blob/master/test2/administratorUsecase.md
 
 **“系统管理”用例**
+https://github.com/Gaojie19971011/is_analysis/blob/master/test2/borrowerUsecase.md
 
