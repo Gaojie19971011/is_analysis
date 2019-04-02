@@ -47,7 +47,7 @@ stop
 @enduml
 ```
 
-**“图书管理”用例流程图如下：**
+**“系统管理”用例流程图如下：**
 
 ![](./administratorProcess.png)
 
