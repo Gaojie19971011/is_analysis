@@ -126,5 +126,5 @@ class 图书管理员 {
 ```
 
 #### 对象图如下：
-![](./bookadministrator)
+![](./bookadministrator.png)
 
