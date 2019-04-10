@@ -77,9 +77,9 @@ class 图书类{
 ```
 
 ### 1.2. 类图如下：
-![](./bookManagementSystem.png)
+![](./practice3.png)
 
-![class](class1.png)
+
 
 ### 1.3. 类图说明：
 说明文字***
@@ -98,7 +98,7 @@ class 读者 {
 @enduml
 ``` 
 #### 对象图如下：
-![class](object1.png)
+![](./reader.png)
 
 ### 2.2 系统管理员类的对象图
 #### 源码如下：
@@ -112,7 +112,7 @@ class 系统管理员 {
 @enduml
 ``` 
 #### 对象图如下：
-![class](object1.png)
+![class](./administrator.png)
 ### 2.3 图书管理员类的对象图
 #### 源码如下
 ```class
@@ -126,4 +126,5 @@ class 图书管理员 {
 ```
 
 #### 对象图如下：
+![](./bookadministrator)
 
