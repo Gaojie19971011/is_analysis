@@ -86,28 +86,45 @@ class 图书类{
 说明文字***
 
 ## 2. 图书管理系统的对象图
-### 2.1 类的对象图
+### 2.1 读者类的对象图
 #### 源码如下：
 ``` class
 @startuml
-object user {
-name = "Dummy"
-id = 123
+class 读者 {
+性别:男
+姓名：高杰
+读者ID:201610414204
+读者密码:gjzazj1997
 }
 @enduml
 ``` 
 #### 对象图如下：
 ![class](object1.png)
 
-### 2.2 类***的对象图
+### 2.2 系统管理员类的对象图
 #### 源码如下：
 ``` class
 @startuml
-object user2 {
-name = "Dummy"
-id = 123
+class 系统管理员 {
+姓名：高杰
+系统管理员ID:201610414204
+系统管理员密码:gjzazj1997
 }
 @enduml
 ``` 
 #### 对象图如下：
 ![class](object1.png)
+### 2.3 图书管理员类的对象图
+#### 源码如下
+```class
+@startuml
+class 图书管理员 {
+姓名：高杰
+图书管理员ID:201610414204
+图书管理员密码:gjzazj1997
+}
+@enduml
+```
+
+#### 对象图如下：
+
