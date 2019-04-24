@@ -33,6 +33,7 @@
 |bookID|string|主键|否|null|主键约束|唯一标示图书的编号|
 |bookName|string| 外键|否|null|not null|图书名称|
 |author|string|外键|是|null| |作者|
+|num|int|外键|是|0| |图书剩余数量|
 |publishing|string|外键|是|null| |出版社|
 
 ## 1.5. 图书借出类
@@ -48,39 +49,35 @@
 
 ## 2. 界面设计
 ## 2.1. 借书界面设计
-![](index.png)
+![](index2.png)
 [网页地址](https://gaojie19971011.github.io/is_analysis_pages/)
 - 用例图参见：借书用例
 - 类图参见：借书类，读者类
 - 顺序图参见：借书顺序图
 - API接口如下：
 
-1. 获取全部分类
-
-- 功能：用于获取全部分类
-- 请求地址： http://[YOUR_DOMAIN]/v1/api/shop_cate
+1. 图书查询
+- 功能：根据图书名称查询
+- 请求地址： http://borrowbook/v1/api/select
 - 请求方法：POST
 - 请求参数：
 
 |参数名称|必填|说明|
 |:-------:|:-------------: | :----------:|
+|bookName|否|搜索图书的条件|
+|bookID|否|搜索图书的条件|
 |access_token|是|用于验证请求合法性的认证信息。 |
 |method|是|固定为 “GET”。|
 
 - 返回实例：
 ```
 {
-    "info": "感谢您的支持。",
-    "data": {
-        "nickname": "O记_Mega可达鸭",
-        "uid": "14361",
-        "signature": "呀  一不小心就进化了",
-        "score1": "322",
-        "real_nickname": "O记_Mega可达鸭",
-        "title": "Lv3 转正",
-        "avatar128": "http://upload.opensns.cn/Uploads_Avatar_14361_58e4b58fccf81.jpg?imageMogr2/crop/!260x260a6a22/thumbnail/128x128!",
-        "avatar512": "http://upload.opensns.cn/Uploads_Avatar_14361_58e4b58fccf81.jpg?imageMogr2/crop/!260x260a6a22/thumbnail/512x512!"
-    },
+    "info": "查询结果",
+    "data": data: [
+                {bookName: java,bookID:"4544536" "author": "爱上放大", "bookStu":"1"  "num":"20"},
+                {bookName: java,bookID:"4567878" "author": "啊士大夫", "bookStu":"0"  "num":"0"},
+                ...
+            ],
     "code": 200
 }
 ```
@@ -89,34 +86,31 @@
 |参数名称|说明|
 |:-------:|:-------------: |
 |Info|返回信息|
-|data|用户的个人信息|
-|dodo|返回码|
+|data|返回查询图书信息列表|
+|code|返回码|
 
-2. *******API
-- 功能：用于获取全部分类
-- 请求地址： http://[YOUR_DOMAIN]/v1/api/shop_cate
+2. 借阅图书
+
+- 功能：借阅图书
+- 请求地址： http://borrow/v1/api/borrowbook
 - 请求方法：POST
 - 请求参数：
 
 |参数名称|必填|说明|
 |:-------:|:-------------: | :----------:|
+|bookID|是|用于借阅图书的唯一标识|
 |access_token|是|用于验证请求合法性的认证信息。 |
 |method|是|固定为 “GET”。|
 
 - 返回实例：
 ```
 {
-    "info": "感谢您的支持。",
+    "info": "借阅成功",
     "data": {
-        "nickname": "O记_Mega可达鸭",
-        "uid": "14361",
-        "signature": "呀  一不小心就进化了",
-        "score1": "322",
-        "real_nickname": "O记_Mega可达鸭",
-        "title": "Lv3 转正",
-        "avatar128": "http://upload.opensns.cn/Uploads_Avatar_14361_58e4b58fccf81.jpg?imageMogr2/crop/!260x260a6a22/thumbnail/128x128!",
-        "avatar512": "http://upload.opensns.cn/Uploads_Avatar_14361_58e4b58fccf81.jpg?imageMogr2/crop/!260x260a6a22/thumbnail/512x512!"
-    },
+        bookName: java,
+        "author": "爱上放大", 
+        "publishing":"长城"
+            },
     "code": 200
 }
 ```
@@ -125,8 +119,7 @@
 |参数名称|说明|
 |:-------:|:-------------: |
 |Info|返回信息|
-|data|用户的个人信息|
+|data|图书基本信息|
 |dodo|返回码|
-
 
  
