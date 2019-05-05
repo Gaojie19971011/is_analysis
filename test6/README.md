@@ -27,7 +27,7 @@
 ![](UseCase.png)
 
 ## 4. 类图设计 [源码](src/class.puml)
-![](./class.png)
+![](class.png)
 
 ## 5. 数据库设计
 - ### [参见数据库设计](./数据库设计.md)
